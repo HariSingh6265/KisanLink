@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard - KisanConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">🌾 KisanConnect</div>
+            <button class="btn btn-outline logout-btn" style="padding: 5px 15px;">Logout</button>
+        </div>
+    </header>
+
+    <div class="dashboard-header">
+        <div class="container">
+            <h2>Welcome, <span id="farmer-name">Farmer</span>!</h2>
+            <p>Here is your farm summary today.</p>
+        </div>
+    </div>
+
+    <div class="stats-grid container">
+        <div class="stat-card">
+            <h4>Products</h4>
+            <p id="total-listed">0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Orders</h4>
+            <p id="total-orders">0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Earnings</h4>
+            <p id="total-earnings">₹0</p>
+        </div>
+    </div>
+
+    <main class="container mt-2">
+        <button id="add-product-btn" class="btn btn-accent btn-block mb-2">➕ Add New Product</button>
+
+        <section class="mb-2">
+            <h3>My Products 🥦</h3>
+            <div id="my-products-list" class="mt-1">
+                <!-- Products will be injected here -->
+            </div>
+        </section>
+
+        <section class="mb-2">
+            <h3>Incoming Orders 🚚</h3>
+            <div id="my-orders-list" class="mt-1">
+                <!-- Orders will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <h3>Add New Crop</h3>
+            <form id="product-form" class="mt-1">
+                <div class="form-group">
+                    <label>Crop Name</label>
+                    <input type="text" name="cropName" class="form-control" placeholder="e.g. Tomatoes" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="category" class="form-control" required>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Grains">Grains</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Price per kg (₹)</label>
+                    <input type="number" name="price" class="form-control" placeholder="e.g. 20" required>
+                </div>
+                <div class="form-group">
+                    <label>Quantity Available (kg)</label>
+                    <input type="number" name="stock" class="form-control" placeholder="e.g. 100" required>
+                </div>
+                <div class="form-group">
+                    <label>Harvest Date</label>
+                    <input type="date" name="harvestDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Photo URL</label>
+                    <input type="url" name="photo" class="form-control" placeholder="Unsplash image URL">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="desc" class="form-control" rows="3" placeholder="Describe your produce..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">List Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="farmer-dashboard.js"></script>
+</body>
+</html>

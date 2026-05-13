@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Fresh - KisanConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">🌾 KisanConnect</a>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button id="translate-btn" class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem;">Hindi/हिंदी</button>
+                <a href="cart.html" class="cart-icon">🛒 <span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" class="form-control" placeholder="🔍 Search fresh crops..." style="box-shadow: var(--shadow);">
+    </div>
+
+    <div class="filter-scroll">
+        <button class="filter-btn active" data-category="All">All</button>
+        <button class="filter-btn" data-category="Vegetables">Vegetables 🥦</button>
+        <button class="filter-btn" data-category="Fruits">Fruits 🍎</button>
+        <button class="filter-btn" data-category="Grains">Grains 🌾</button>
+    </div>
+
+    <main>
+        <div class="container mt-1">
+            <div style="background: var(--accent); color: white; padding: 15px; border-radius: var(--radius); margin-bottom: 20px; text-align: center;">
+                <h3 data-hi="सीजन की ताज़ा फसलें" data-en="Seasonal Fresh Picks">Seasonal Fresh Picks 🍓</h3>
+                <p style="font-size: 0.8rem;" data-hi="सीधे खेत से आपके घर तक" data-en="Direct from farm to your kitchen">Direct from farm to your kitchen</p>
+            </div>
+
+            <h3 class="mb-1" data-hi="सभी उत्पाद" data-en="All Products">All Products</h3>
+            <div id="products-grid" class="products-grid">
+                <!-- Products will be injected here -->
+            </div>
+        </div>
+
+        <section class="container mt-2 mb-2">
+            <h3 class="mb-1" data-hi="अपने किसान को जानें" data-en="Know Your Farmer">Know Your Farmer 🧑🌾</h3>
+            <div class="filter-scroll" style="padding: 0;">
+                <div class="card" style="min-width: 150px; text-align: center; padding: 15px;">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&h=100" style="width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px;">
+                    <h4 style="font-size: 0.9rem;">Ramesh Kumar</h4>
+                    <p style="font-size: 0.7rem; color: var(--text-muted);">Dewas, MP</p>
+                </div>
+                <div class="card" style="min-width: 150px; text-align: center; padding: 15px;">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100" style="width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px;">
+                    <h4 style="font-size: 0.9rem;">Sunita Devi</h4>
+                    <p style="font-size: 0.7rem; color: var(--text-muted);">Nashik, MH</p>
+                </div>
+                <div class="card" style="min-width: 150px; text-align: center; padding: 15px;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100" style="width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px;">
+                    <h4 style="font-size: 0.9rem;">Mohan Singh</h4>
+                    <p style="font-size: 0.7rem; color: var(--text-muted);">Amritsar, PB</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="consumer-home.js"></script>
+</body>
+</html>

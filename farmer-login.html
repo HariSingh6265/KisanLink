@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Login - KisanConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">🌾 KisanConnect</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card form-container">
+            <div class="form-toggle">
+                <button class="toggle-btn active" data-target="login">Login</button>
+                <button class="toggle-btn" data-target="register">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <h2 class="mb-2">Farmer Login</h2>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" class="form-control" placeholder="Enter phone number" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-1">Login to Dashboard</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" style="display: none;">
+                <h2 class="mb-2">Farmer Registration</h2>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Village/City</label>
+                    <input type="text" name="village" class="form-control" placeholder="Village or City" required>
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <input type="text" name="state" class="form-control" placeholder="State" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label>Aadhaar Number</label>
+                    <input type="text" name="aadhaar" class="form-control" placeholder="12-digit Aadhaar" required>
+                </div>
+                <div class="form-group">
+                    <label>Bank Account Number</label>
+                    <input type="text" name="bank" class="form-control" placeholder="Bank Account Number" required>
+                </div>
+                <div class="form-group">
+                    <label>Create Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-1">Register Now</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="farmer-login.js"></script>
+</body>
+</html>

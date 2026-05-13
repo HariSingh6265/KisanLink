@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - KisanConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">🌾 KisanConnect</a>
+        </div>
+    </header>
+
+    <main class="container mt-2">
+        <div class="text-center">
+            <h1 style="color: var(--primary);">🎉 Order Confirmed!</h1>
+            <p>Your order ID: <strong id="display-order-id">#XXXXX</strong></p>
+        </div>
+
+        <div class="tracking-steps">
+            <div class="t-step">
+                <div class="step-dot">1</div>
+                <span>Placed</span>
+            </div>
+            <div class="t-step">
+                <div class="step-dot">2</div>
+                <span>Packed</span>
+            </div>
+            <div class="t-step">
+                <div class="step-dot">3</div>
+                <span>Shipped</span>
+            </div>
+            <div class="t-step">
+                <div class="step-dot">4</div>
+                <span>Delivered</span>
+            </div>
+        </div>
+
+        <section class="card mb-2">
+            <h3>Estimated Delivery</h3>
+            <p style="color: var(--primary); font-weight: 700;">Within 24 Hours</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Directly from farmer's gate to yours.</p>
+        </section>
+
+        <section class="card mb-2">
+            <h3>Order Summary</h3>
+            <div id="order-summary" class="mt-1">
+                <!-- Summary injected here -->
+            </div>
+        </section>
+
+        <section class="card mb-2">
+            <h3>Farmer Contact</h3>
+            <p><strong>Support:</strong> +91 98765 43210</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Need help? Contact our farmer support line.</p>
+        </section>
+
+        <a href="consumer-home.html" class="btn btn-primary btn-block mb-2">Continue Shopping 🥦</a>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="order-tracking.js"></script>
+</body>
+</html>

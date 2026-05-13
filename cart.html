@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - KisanConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="consumer-home.html" style="font-size: 1.2rem;">⬅️</a>
+            <div class="logo">🛒 My Cart</div>
+            <div></div>
+        </div>
+    </header>
+
+    <main class="container mt-2">
+        <div id="cart-items">
+            <!-- Cart items will be injected here -->
+        </div>
+
+        <section class="mt-2">
+            <h3>Order Summary</h3>
+            <div class="card mt-1">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Delivery Fee</span>
+                    <span id="delivery">₹30</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Platform Fee (10%)</span>
+                    <span id="platform">₹0</span>
+                </div>
+                <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+                <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.2rem; color: var(--primary);">
+                    <span>Total Amount</span>
+                    <span id="total-amount">₹0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-2 mb-2">
+            <h3>Checkout Details</h3>
+            <form id="checkout-form" class="mt-1">
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <textarea name="address" class="form-control" rows="2" placeholder="Street, City, Pincode" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Delivery Slot</label>
+                    <select name="slot" class="form-control" required>
+                        <option value="Morning 6-9am">Morning 6-9am</option>
+                        <option value="Afternoon 12-3pm">Afternoon 12-3pm</option>
+                        <option value="Evening 5-8pm">Evening 5-8pm</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div style="display: flex; gap: 10px; margin-top: 5px;">
+                        <label style="flex: 1; border: 1px solid #ddd; padding: 10px; border-radius: var(--radius); text-align: center; cursor: pointer;">
+                            <input type="radio" name="payment" value="UPI" checked> UPI
+                        </label>
+                        <label style="flex: 1; border: 1px solid #ddd; padding: 10px; border-radius: var(--radius); text-align: center; cursor: pointer;">
+                            <input type="radio" name="payment" value="COD"> Cash
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-2">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

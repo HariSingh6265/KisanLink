@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - KisanConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="consumer-home.html" style="font-size: 1.2rem;">⬅️</a>
+            <div class="logo">🌾 Details</div>
+            <a href="cart.html" class="cart-icon">🛒 <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main>
+        <img id="product-img" src="" style="width: 100%; height: 300px; object-fit: cover;">
+        
+        <div class="container mt-2">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <h2 id="product-name">Product Name</h2>
+                    <p id="harvest-info" class="freshness-tag">Harvested 10h ago</p>
+                </div>
+                <div style="text-align: right;">
+                    <h2 id="product-price" style="color: var(--primary);">₹0/kg</h2>
+                    <p id="product-stock" style="font-size: 0.8rem; color: var(--text-muted);">100 kg left</p>
+                </div>
+            </div>
+
+            <p id="product-desc" class="mt-1" style="color: var(--text-muted);">Product description goes here.</p>
+
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div class="card" style="display: flex; gap: 15px; align-items: center;">
+                <img id="farmer-img" src="" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                <div>
+                    <h4 id="farmer-name">Farmer Name</h4>
+                    <p id="farmer-loc" style="font-size: 0.8rem; color: var(--text-muted);">Village, State</p>
+                    <p style="font-size: 0.8rem;">⭐⭐⭐⭐⭐ (4.8)</p>
+                </div>
+            </div>
+
+            <div class="mt-2">
+                <h3>Farm Location</h3>
+                <div style="width: 100%; height: 150px; background: #e0e0e0; border-radius: var(--radius); margin-top: 10px; overflow: hidden;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.561973682!2d77.2273151!3d28.612912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b718710ace2!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1715510000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="mt-2">
+                <h3>Consumer Reviews</h3>
+                <div class="card mt-1" style="font-size: 0.9rem;">
+                    <p><strong>Anjali S.</strong> ⭐⭐⭐⭐⭐</p>
+                    <p>Very fresh and high quality. Will order again!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 15px; box-shadow: 0 -4px 10px rgba(0,0,0,0.05); display: flex; gap: 15px; align-items: center;">
+        <input type="number" id="qty-input" value="1" min="1" class="form-control" style="width: 80px;">
+        <button id="add-to-cart-btn" class="btn btn-primary btn-block">Add to Cart</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="product-detail.js"></script>
+</body>
+</html>
